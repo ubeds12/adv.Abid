@@ -35,35 +35,47 @@
             <li><a href="#about">Profile</a></li>
             <li><a href="#practice">Practice Areas</a></li>
             <li><a href="#judgments">Judgments</a></li>
-            <li><a href="#press">Press Gallery</a></li>
             <li><a href="#blog">Insights</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Right-to-Left Slideshow -->
     <section class="hero">
-        <h1>Adv. Abid Shaikh</h1>
-        <h2>B.A., LL.B., LL.M.</h2>
-        <p class="enrollment">Enrl. No: [Insert Enrollment Number Here, e.g., MAH/1234/2015]</p>
-        <p>Providing steadfast legal representation and ethical counsel at the Bombay High Court and District Courts.</p>
+        <div class="hero-slideshow">
+            <img src="abid1 (1).png" alt="Adv. Abid Shaikh in Library" class="slide active">
+            <img src="abid1 (2).png" alt="Adv. Abid Shaikh Writing" class="slide">
+            <img src="abid1 (3).png" alt="Adv. Abid Shaikh Reading" class="slide">
+            <img src="abid1 (4).png" alt="Adv. Abid Shaikh Portrait" class="slide">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Adv. Abid Shaikh</h1>
+            <h2>B.A., LL.B., LL.M.</h2>
+            <p>Providing steadfast legal representation and ethical counsel at the Bombay High Court and District Courts.</p>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title">Advocate Profile</h2>
-        <div class="about-content">
-            <p>Advocate Abid Shaikh is a highly qualified and dedicated legal professional holding degrees in <strong>B.A., LL.B., and an LL.M.</strong> With a profound understanding of Indian jurisprudence and a commitment to justice, Adv. Shaikh brings rigorous academic training and practical courtroom acumen to every brief he handles.</p>
-            
-            <p>He actively practices before the Constitutional Courts and Trial Courts, ensuring that clients receive comprehensive legal strategies from the trial stage up to appellate litigation.</p>
-            
-            <div class="courts-list">
-                <h3>Primary Courts of Practice:</h3><br>
-                <ul>
-                    <li><strong>Bombay High Court</strong>, Bench at Chhatrapati Sambhajinagar (Aurangabad)</li>
-                    <li><strong>District and Sessions Court</strong>, Chhatrapati Sambhajinagar (Aurangabad)</li>
-                </ul>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="IMG-20260817-WA0002.jpg" alt="Adv. Abid Shaikh">
+            </div>
+            <div class="about-content">
+                <p>Advocate Abid Shaikh is a highly qualified and dedicated legal professional holding degrees in <strong>B.A., LL.B., and an LL.M.</strong> With a profound understanding of Indian jurisprudence and a commitment to justice, Adv. Shaikh brings rigorous academic training and practical courtroom acumen to every brief he handles.</p>
+                
+                <p>He actively practices before the Constitutional Courts and Trial Courts, ensuring that clients receive comprehensive legal strategies from the trial stage up to appellate litigation.</p>
+                
+                <div class="courts-list">
+                    <h3>Primary Courts of Practice:</h3><br>
+                    <ul>
+                        <li><strong>Bombay High Court</strong>, Bench at Chhatrapati Sambhajinagar (Aurangabad)</li>
+                        <li><strong>District and Sessions Court</strong>, Chhatrapati Sambhajinagar (Aurangabad)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -99,7 +111,7 @@
             
             <!-- Always Visible Judgment 1 -->
             <div class="judgment-card">
-                <h4>[Insert Case Name 1, e.g., ------------- vs. ----------]</h4>
+                <h4>[Insert Case Name 1, e.g., State of Maharashtra vs. John Doe]</h4>
                 <p><strong>Citation:</strong> [e.g., 2023 SCC OnLine Bom 123]</p>
                 <p><strong>Court:</strong> Bombay High Court, Bench at Aurangabad</p>
                 <p><strong>Summary:</strong> Successfully argued for the quashing of an FIR under Section 482 of the CrPC on the grounds of a civil dispute being given a criminal color.</p>
@@ -146,51 +158,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Press / News Article Photo Gallery & Slideshow Section -->
-    <section id="press" style="background-color: #f1f3f5;">
-        <h2 class="section-title">Press & Media Gallery</h2>
-        <div class="press-container">
-            <p style="text-align: center; margin-bottom: 2rem;">Newspaper clippings and media photographs featuring case coverage. Click any item to open the slideshow.</p>
-            
-            <div class="press-grid">
-                <div class="press-card" onclick="openLightbox(0)">
-                    <img src=""C:\Users\Ubeds\OneDrive\Desktop\New folder\764979536_2580016615751902_5977133751133401065_n.jpg"" alt="News Clipping 1">
-                    <div class="press-caption">
-                        <h4>[Insert Headline / Publication 1]</h4>
-                        <p>Click to view photo</p>
-                    </div>
-                </div>
-
-                <div class="press-card" onclick="openLightbox(1)">
-                    <img src="https://drive.google.com/file/d/1qGWH-ufj-aHrKvKBrgyJsG3U6WjKPUg1/view?usp=sharing" alt="News Clipping 2">
-                    <div class="press-caption">
-                        <h4>[Insert Headline / Publication 2]</h4>
-                        <p>Click to view photo</p>
-                    </div>
-                </div>
-
-                <div class="press-card" onclick="openLightbox(2)">
-                    <img src="https://drive.google.com/file/d/1qGWH-ufj-aHrKvKBrgyJsG3U6WjKPUg1/view?usp=sharing" alt="News Clipping 3">
-                    <div class="press-caption">
-                        <h4>[Insert Headline / Publication 3]</h4>
-                        <p>Click to view photo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox / Slideshow Modal -->
-    <div id="lightbox-modal" class="lightbox">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <button class="lightbox-prev" onclick="changeSlide(-1)">&#10094;</button>
-        <div class="lightbox-content-wrapper">
-            <img id="lightbox-img" src="" alt="Slideshow Image">
-            <p id="lightbox-caption"></p>
-        </div>
-        <button class="lightbox-next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
 
     <!-- Legal Blog / Articles Section -->
     <section id="blog">
@@ -267,12 +234,6 @@
                 <p><strong>Consultation Hours:</strong><br>
                 Monday - Saturday: 5:00 PM to 9:00 PM<br>
                 (Prior appointment mandatory)</p>
-                <br>
-                <p><strong>Connect on Social Media:</strong></p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/abid.shaikh.545" target="_blank" class="social-btn facebook">Facebook</a>
-                    <a href="https://instagram.com/abid.shaikh.545" target="_blank" class="social-btn instagram">Instagram</a>
-                </div>
             </div>
             
             <div class="contact-form">
@@ -298,6 +259,29 @@
             The information contained on this website is provided for informational purposes only, and should not be construed as legal advice on any subject matter.
         </p>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="#" class="whatsapp-float" onclick="openWAModal(event)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Contact" />
+    </a>
+
+    <!-- WhatsApp Popup Modal Form -->
+    <div id="wa-modal" class="wa-modal-overlay" style="display: none;">
+        <div class="wa-modal-content">
+            <span class="wa-close-btn" onclick="closeWAModal()">&times;</span>
+            <h3>Request Consultation via WhatsApp</h3>
+            <form id="wa-modal-form" onsubmit="sendModalToWhatsApp(event)">
+                <input type="text" id="modal-client-name" placeholder="Your Name" required>
+                <input type="email" id="modal-client-email" placeholder="Your Email" required>
+                <input type="tel" id="modal-client-phone" placeholder="Your Phone Number" required>
+                <textarea id="modal-client-matter" rows="4" placeholder="Brief description of your legal matter..." required></textarea>
+                
+                <button type="submit" style="background-color: #25D366; color: white; font-weight: bold; width: 100%; padding: 12px; border: none; border-radius: 4px; cursor: pointer;">
+                    Send via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
