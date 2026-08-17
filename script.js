@@ -35,9 +35,28 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // 3. Hero Section Right-to-Left Slideshow Logic
+    const slides = document.querySelectorAll('.hero-slideshow .slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].classList.add('prev');
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            slides.forEach((slide, index) => {
+                if (index !== currentSlide) {
+                    slide.classList.remove('prev');
+                }
+            });
+            slides[currentSlide].classList.add('active');
+        }, 4500);
+    }
 });
 
-// 3. Notable Judgments Toggle Dropdown Logic
+// 4. Notable Judgments Toggle Dropdown Logic
 function toggleJudgments() {
     const extraContent = document.getElementById('extra-judgments');
     const toggleText = document.getElementById('toggle-text');
@@ -54,57 +73,7 @@ function toggleJudgments() {
     }
 }
 
-// 4. Press Photo Lightbox / Slideshow Logic
-const pressGalleryData = [
-    {
-        src: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&q=80&w=600",
-        caption: "[Insert Headline / Publication 1 Description]"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=600",
-        caption: "[Insert Headline / Publication 2 Description]"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600",
-        caption: "[Insert Headline / Publication 3 Description]"
-    }
-];
-
-let currentSlideIndex = 0;
-
-function openLightbox(index) {
-    currentSlideIndex = index;
-    const modal = document.getElementById('lightbox-modal');
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    updateSlide();
-}
-
-function closeLightbox() {
-    const modal = document.getElementById('lightbox-modal');
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-function changeSlide(direction) {
-    currentSlideIndex += direction;
-    if (currentSlideIndex >= pressGalleryData.length) {
-        currentSlideIndex = 0;
-    } else if (currentSlideIndex < 0) {
-        currentSlideIndex = pressGalleryData.length - 1;
-    }
-    updateSlide();
-}
-
-function updateSlide() {
-    const imgElement = document.getElementById('lightbox-img');
-    const captionElement = document.getElementById('lightbox-caption');
-    
-    imgElement.src = pressGalleryData[currentSlideIndex].src;
-    captionElement.innerText = pressGalleryData[currentSlideIndex].caption;
-}
-
-// 5. WhatsApp Form Submission Logic
+// 5. WhatsApp Form Submission Logic (Contact Section)
 function sendToWhatsApp(event) {
     event.preventDefault(); 
 
@@ -121,4 +90,35 @@ function sendToWhatsApp(event) {
     const waLink = `https://wa.me/${waNumber}?text=${encodedMessage}`;
 
     window.open(waLink, '_blank');
+}
+
+// 6. WhatsApp Floating Button Modal Logic
+function openWAModal(event) {
+    event.preventDefault();
+    document.getElementById('wa-modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeWAModal() {
+    document.getElementById('wa-modal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function sendModalToWhatsApp(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById('modal-client-name').value;
+    const email = document.getElementById('modal-client-email').value;
+    const phone = document.getElementById('modal-client-phone').value;
+    const matter = document.getElementById('modal-client-matter').value;
+
+    const waNumber = "917798486728";
+
+    const message = `Hello Adv. Abid Shaikh,\n\nI am contacting you from your website to request a consultation via the floating button. Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Legal Matter:* ${matter}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const waLink = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+
+    window.open(waLink, '_blank');
+    closeWAModal();
 }
