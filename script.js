@@ -114,7 +114,7 @@ function sendModalToWhatsApp(event) {
 
     const waNumber = "917798486728";
 
-    const message = `Hello Adv. Abid Shaikh,\n\nI am contacting you from your website to request a consultation via the floating button. Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Legal Matter:* ${matter}`;
+    const message = `Hello Adv. Abid Shaikh,\n\nI am contacting you from your website to request a consultation. Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Legal Matter:* ${matter}`;
 
     const encodedMessage = encodeURIComponent(message);
     const waLink = `https://wa.me/${waNumber}?text=${encodedMessage}`;
