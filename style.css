@@ -357,3 +357,52 @@ footer p { margin-bottom: 10px; opacity: 0.8; }
     border-top: 1px solid #eaeaea;
     padding-top: 1rem;
 }
+/* Careers Section */
+#careers {
+    background-color: var(--bg-light);
+}
+
+.careers-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.role-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent-color);
+}
+
+.role-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.role-description {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.apply-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.apply-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
