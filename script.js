@@ -82,7 +82,7 @@ function sendToWhatsApp(event) {
     const phone = document.getElementById('client-phone').value;
     const matter = document.getElementById('client-matter').value;
 
-    const waNumber = "917798486728";
+    const waNumber = "918668419385";
 
     const message = `Hello Adv. Abid Shaikh,\n\nI am contacting you from your website to request a consultation. Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Legal Matter:* ${matter}`;
 
@@ -112,7 +112,7 @@ function sendModalToWhatsApp(event) {
     const phone = document.getElementById('modal-client-phone').value;
     const matter = document.getElementById('modal-client-matter').value;
 
-    const waNumber = "917798486728";
+    const waNumber = "918668419385";
 
     const message = `Hello Adv. Abid Shaikh,\n\nI am contacting you from your website to request a consultation. Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Legal Matter:* ${matter}`;
 
