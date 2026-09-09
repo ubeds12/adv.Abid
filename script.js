@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // 4. Notable Judgments Toggle Dropdown Logic
-function toggleJudgments() {
+/*function toggleJudgments() {
     const extraContent = document.getElementById('extra-judgments');
     const toggleText = document.getElementById('toggle-text');
     const toggleArrow = document.getElementById('toggle-arrow');
@@ -71,7 +71,7 @@ function toggleJudgments() {
         toggleText.innerText = "View Less Judgments";
         toggleArrow.innerHTML = "&#9652;"; // Up arrow
     }
-}
+}*/
 
 // 5. WhatsApp Form Submission Logic (Contact Section)
 function sendToWhatsApp(event) {
