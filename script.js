@@ -122,3 +122,10 @@ function sendModalToWhatsApp(event) {
     window.open(waLink, '_blank');
     closeWAModal();
 }
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', function() {
+    navLinks.classList.toggle('active'); // Shows/hides the dropdown
+    mobileMenu.classList.toggle('open');  // Highlights dots in gold
+});
