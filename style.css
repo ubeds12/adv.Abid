@@ -431,3 +431,54 @@ footer .social-links a:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
 }
+/* 1. Hide 3-dots icon on desktop, style it for mobile */
+.menu-toggle {
+    display: none;              /* Hidden on desktop screens */
+    flex-direction: column;     /* Stacks dots vertically (top to bottom) */
+    cursor: pointer;
+    gap: 4px;                   /* Space between the dots */
+    padding: 8px;
+}
+
+/* 2. Shape each span into a circle (dot) */
+.menu-toggle .dot {
+    width: 5px;                 /* Dot width */
+    height: 5px;                /* Dot height */
+    background-color: #ffffff;  /* Dot color (white) */
+    border-radius: 50%;         /* Makes square spans into perfect circles */
+    transition: 0.3s ease;
+}
+
+/* 3. Mobile screen display rules */
+@media (max-width: 768px) {
+    /* Show the 3-dots icon on screens narrower than 768px */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hide menu links by default on mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #1a252f;
+        padding: 1.5rem 0;
+        text-align: center;
+        gap: 1.2rem;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Show dropdown menu when 3-dots icon is clicked */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Give dots a gold highlight when menu is open */
+    .menu-toggle.open .dot {
+        background-color: #cda34f;
+        transform: scale(1.2);
+    }
+}
